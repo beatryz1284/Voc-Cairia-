@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Game Arena 2026{% endblock %}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="{{ url_for('inicio') }}" class="logo">
+
+        <span class="logo-icon"></span>
+
+        <div class="logo-name">
+            GAME<span>ARENA</span>
+        </div>
+
+        <small>2026</small>
+
+    </a>
+
+
+    <nav class="menu">
+
+        <a href="#inicio">INÍCIO</a>
+        <a href="#jogos">TORNEIOS</a>
+        <a href="#evento">EVENTO</a>
+        <a href="#modos">MODOS</a>
+
+    </nav>
+
+
+    <a href="#inscricao" class="header-button">
+        INSCRIÇÃO ↗
+    </a>
+
+</header>
+
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+
+<footer class="footer">
+
+    <div>
+        <strong>GAME<span>ARENA</span></strong>
+        <small>2026</small>
+    </div>
+
+    <p>
+        EVENTO GAMER • PROJETO ACADÊMICO
+    </p>
+
+    <a href="{{ url_for('sobre') }}">
+        SOBRE O PROJETO ↗
+    </a>
+
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
