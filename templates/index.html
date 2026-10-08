@@ -1,14 +1,34 @@
+
 {% extends "base.html" %}
 
 {% block title %}Game Arena 2026{% endblock %}
 
 {% block content %}
 
+<style>
+/* Ajuste exclusivo para os dois jogos */
+.games-section .games-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+.games-section .games-grid .game-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 310px;
+    grid-column: auto;
+    grid-row: auto;
+}
 
+@media (max-width: 650px) {
+    .games-section .games-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<!-- HERO -->
 <section class="hero" id="inicio">
 
     <div class="grid-background"></div>
@@ -23,7 +43,6 @@
         <b></b>
     </span>
 
-
     <div class="hero-content">
 
         <div class="event-pill">
@@ -31,17 +50,12 @@
             EVENTO GAMER • 2026
         </div>
 
-
-        <p class="ready-text">
-            READY TO PLAY
-        </p>
-
+        <p class="ready-text">READY TO PLAY</p>
 
         <h1>
             ENTRE
             <strong>NO JOGO.</strong>
         </h1>
-
 
         <div class="hero-line">
             <span></span>
@@ -49,13 +63,11 @@
             <span></span>
         </div>
 
-
         <p class="hero-description">
             Prepare seu time, escolha seu jogo e participe
             de uma experiência gamer feita para quem gosta
             de competição.
         </p>
-
 
         <div class="hero-buttons">
 
@@ -64,18 +76,16 @@
                 <strong>↗</strong>
             </a>
 
-
             <a href="#jogos" class="button-secondary">
                 CONHECER OS JOGOS
             </a>
 
         </div>
 
-
         <div class="hero-stats">
 
             <div>
-                <strong>05</strong>
+                <strong>02</strong>
                 <span>JOGOS</span>
             </div>
 
@@ -93,26 +103,14 @@
 
     </div>
 
-
     <div class="system-bottom">
-
-        <span>
-            ◢ SYSTEM READY
-        </span>
-
-        <span>
-            GAME ARENA // 2026 ◣
-        </span>
-
+        <span>◢ SYSTEM READY</span>
+        <span>GAME ARENA // 2026 ◣</span>
     </div>
 
 </section>
 
-
-<!-- =====================================================
-     FAIXA VERDE
-===================================================== -->
-
+<!-- FAIXA VERDE -->
 <section class="ticker">
 
     <div>
@@ -122,13 +120,13 @@
         FORTNITE
         <span>✦</span>
 
-        ROCKET LEAGUE
+        SOLO
         <span>✦</span>
 
-        MORTAL KOMBAT
+        DUO
         <span>✦</span>
 
-        STRIKE OPS
+        SQUAD
         <span>✦</span>
 
         GAME ARENA 2026
@@ -136,11 +134,7 @@
 
 </section>
 
-
-<!-- =====================================================
-     JOGOS
-===================================================== -->
-
+<!-- JOGOS -->
 <section class="games-section" id="jogos">
 
     <div class="section-top">
@@ -156,24 +150,22 @@
             </h2>
         </div>
 
-
         <div class="section-description">
+
             <span>SELECT_GAME.exe</span>
 
             <p>
-                Cinco jogos. Diferentes desafios.
+                Dois jogos. Diferentes desafios.
                 Escolha onde você quer competir.
             </p>
+
         </div>
 
     </div>
 
-
     <div class="games-grid">
 
-
         <!-- FREE FIRE -->
-
         <article class="game-card featured">
 
             <div class="card-header">
@@ -189,25 +181,17 @@
 
                 <span>BATTLE ROYALE</span>
 
-                <h3>
-                    FREE FIRE
-                </h3>
+                <h3>FREE FIRE</h3>
 
-                <p>
-                    SOLO // DUO // SQUAD
-                </p>
+                <p>SOLO // DUO // SQUAD</p>
 
             </div>
 
-            <div class="corner-arrow">
-                ↗
-            </div>
+            <div class="corner-arrow">↗</div>
 
         </article>
 
-
         <!-- FORTNITE -->
-
         <article class="game-card">
 
             <div class="card-header">
@@ -223,121 +207,13 @@
 
                 <span>BATTLE ROYALE</span>
 
-                <h3>
-                    FORTNITE
-                </h3>
+                <h3>FORTNITE</h3>
 
-                <p>
-                    SOLO // DUO // SQUAD
-                </p>
+                <p>SOLO // DUO // SQUAD</p>
 
             </div>
 
-            <div class="corner-arrow">
-                ↗
-            </div>
-
-        </article>
-
-
-        <!-- ROCKET LEAGUE -->
-
-        <article class="game-card">
-
-            <div class="card-header">
-                <span>03</span>
-                <span>ONLINE ●</span>
-            </div>
-
-            <div class="game-symbol">
-                RL
-            </div>
-
-            <div class="game-info">
-
-                <span>SPORT // ACTION</span>
-
-                <h3>
-                    ROCKET LEAGUE
-                </h3>
-
-                <p>
-                    DUO // SQUAD
-                </p>
-
-            </div>
-
-            <div class="corner-arrow">
-                ↗
-            </div>
-
-        </article>
-
-
-        <!-- MORTAL KOMBAT -->
-
-        <article class="game-card">
-
-            <div class="card-header">
-                <span>04</span>
-                <span>ONLINE ●</span>
-            </div>
-
-            <div class="game-symbol">
-                MK
-            </div>
-
-            <div class="game-info">
-
-                <span>FIGHTING</span>
-
-                <h3>
-                    MORTAL KOMBAT
-                </h3>
-
-                <p>
-                    SOLO
-                </p>
-
-            </div>
-
-            <div class="corner-arrow">
-                ↗
-            </div>
-
-        </article>
-
-
-        <!-- STRIKE OPS -->
-
-        <article class="game-card">
-
-            <div class="card-header">
-                <span>05</span>
-                <span>ONLINE ●</span>
-            </div>
-
-            <div class="game-symbol fps">
-                FPS
-            </div>
-
-            <div class="game-info">
-
-                <span>TACTICAL FPS</span>
-
-                <h3>
-                    STRIKE OPS
-                </h3>
-
-                <p>
-                    DUO // SQUAD
-                </p>
-
-            </div>
-
-            <div class="corner-arrow">
-                ↗
-            </div>
+            <div class="corner-arrow">↗</div>
 
         </article>
 
@@ -345,11 +221,7 @@
 
 </section>
 
-
-<!-- =====================================================
-     EVENTO
-===================================================== -->
-
+<!-- EVENTO -->
 <section class="event-section" id="evento">
 
     <div class="event-heading">
@@ -365,75 +237,47 @@
 
     </div>
 
-
     <div class="event-grid">
-
 
         <article class="info-card">
 
-            <span class="info-number">
-                01
-            </span>
+            <span class="info-number">01</span>
 
-            <div class="info-icon">
-                ◷
-            </div>
+            <div class="info-icon">◷</div>
 
             <small>DATA</small>
 
-            <h3>
-                OUTUBRO
-            </h3>
+            <h3>OUTUBRO</h3>
 
-            <p>
-                GAME ARENA // 2026
-            </p>
+            <p>GAME ARENA // 2026</p>
 
         </article>
-
 
         <article class="info-card active">
 
-            <span class="info-number">
-                02
-            </span>
+            <span class="info-number">02</span>
 
-            <div class="info-icon">
-                ◉
-            </div>
+            <div class="info-icon">◉</div>
 
             <small>LOCAL</small>
 
-            <h3>
-                ONLINE
-            </h3>
+            <h3>ONLINE</h3>
 
-            <p>
-                CONECTE-SE E ENTRE NA ARENA
-            </p>
+            <p>CONECTE-SE E ENTRE NA ARENA</p>
 
         </article>
 
-
         <article class="info-card">
 
-            <span class="info-number">
-                03
-            </span>
+            <span class="info-number">03</span>
 
-            <div class="info-icon">
-                ♜
-            </div>
+            <div class="info-icon">♜</div>
 
             <small>MODALIDADES</small>
 
-            <h3>
-                03 MODOS
-            </h3>
+            <h3>03 MODOS</h3>
 
-            <p>
-                SOLO // DUO // SQUAD
-            </p>
+            <p>SOLO // DUO // SQUAD</p>
 
         </article>
 
@@ -441,11 +285,7 @@
 
 </section>
 
-
-<!-- =====================================================
-     MODOS
-===================================================== -->
-
+<!-- MODALIDADES -->
 <section class="modes-section" id="modos">
 
     <div class="section-top">
@@ -469,81 +309,53 @@
 
     </div>
 
-
     <div class="mode-list">
-
 
         <div class="mode-row">
 
-            <span class="mode-number">
-                01
-            </span>
+            <span class="mode-number">01</span>
 
-            <h3>
-                SOLO
-            </h3>
+            <h3>SOLO</h3>
 
-            <p>
-                Você contra todos.
-            </p>
+            <p>Você contra todos.</p>
 
             <span class="players">
                 01 PLAYER
             </span>
 
-            <span class="mode-arrow">
-                ↗
-            </span>
+            <span class="mode-arrow">↗</span>
 
         </div>
 
-
         <div class="mode-row">
 
-            <span class="mode-number">
-                02
-            </span>
+            <span class="mode-number">02</span>
 
-            <h3>
-                DUO
-            </h3>
+            <h3>DUO</h3>
 
-            <p>
-                Escolha seu parceiro.
-            </p>
+            <p>Escolha seu parceiro.</p>
 
             <span class="players">
                 02 PLAYERS
             </span>
 
-            <span class="mode-arrow">
-                ↗
-            </span>
+            <span class="mode-arrow">↗</span>
 
         </div>
 
-
         <div class="mode-row">
 
-            <span class="mode-number">
-                03
-            </span>
+            <span class="mode-number">03</span>
 
-            <h3>
-                SQUAD
-            </h3>
+            <h3>SQUAD</h3>
 
-            <p>
-                Monte sua equipe.
-            </p>
+            <p>Monte sua equipe.</p>
 
             <span class="players">
                 04 PLAYERS
             </span>
 
-            <span class="mode-arrow">
-                ↗
-            </span>
+            <span class="mode-arrow">↗</span>
 
         </div>
 
@@ -551,13 +363,8 @@
 
 </section>
 
-
-<!-- =====================================================
-     INSCRIÇÃO
-===================================================== -->
-
+<!-- INSCRIÇÃO -->
 <section class="registration-section" id="inscricao">
-
 
     <div class="registration-left">
 
@@ -571,10 +378,9 @@
         </h2>
 
         <p>
-            Preencha os dados abaixo e escolha
-            sua modalidade para participar.
+            Preencha os dados abaixo, escolha seu jogo
+            e sua modalidade para participar.
         </p>
-
 
         <div class="registration-status">
 
@@ -584,7 +390,6 @@
             <strong>OPEN</strong>
 
         </div>
-
 
         <div class="decorative-code">
 
@@ -596,32 +401,25 @@
 
     </div>
 
-
     <div class="registration-form">
 
         <div class="form-header">
 
             <div>
                 <small>PLAYER_01</small>
-
-                <strong>
-                    REGISTRATION
-                </strong>
+                <strong>REGISTRATION</strong>
             </div>
 
-            <span>
-                ● ONLINE
-            </span>
+            <span>● ONLINE</span>
 
         </div>
-
 
         <form
             action="{{ url_for('inscricao') }}"
             method="POST"
         >
 
-
+            <!-- NOME -->
             <div class="field">
 
                 <label for="nome">
@@ -638,7 +436,7 @@
 
             </div>
 
-
+            <!-- EMAIL -->
             <div class="field">
 
                 <label for="email">
@@ -655,16 +453,53 @@
 
             </div>
 
+            <!-- JOGO -->
+            <div class="field">
 
+                <label for="jogo">
+                    03 // SELECT GAME
+                </label>
+
+                <select
+                    id="jogo"
+                    name="jogo"
+                    required
+                    style="
+                        width: 100%;
+                        padding: 15px;
+                        border: 1px solid rgba(0,237,122,.35);
+                        background: #07101d;
+                        color: #f5f7f7;
+                        border-radius: 6px;
+                        font-family: inherit;
+                        font-size: 14px;
+                    "
+                >
+
+                    <option value="" disabled selected>
+                        Selecione seu jogo
+                    </option>
+
+                    <option value="Free Fire">
+                        Free Fire
+                    </option>
+
+                    <option value="Fortnite">
+                        Fortnite
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- MODALIDADE -->
             <div class="field">
 
                 <label>
-                    03 // SELECT MODE
+                    04 // SELECT MODE
                 </label>
 
-
                 <div class="mode-options">
-
 
                     <label>
 
@@ -676,19 +511,11 @@
                         >
 
                         <span>
-
-                            <strong>
-                                SOLO
-                            </strong>
-
-                            <small>
-                                01
-                            </small>
-
+                            <strong>SOLO</strong>
+                            <small>01</small>
                         </span>
 
                     </label>
-
 
                     <label>
 
@@ -699,19 +526,11 @@
                         >
 
                         <span>
-
-                            <strong>
-                                DUO
-                            </strong>
-
-                            <small>
-                                02
-                            </small>
-
+                            <strong>DUO</strong>
+                            <small>02</small>
                         </span>
 
                     </label>
-
 
                     <label>
 
@@ -722,15 +541,8 @@
                         >
 
                         <span>
-
-                            <strong>
-                                SQUAD
-                            </strong>
-
-                            <small>
-                                04
-                            </small>
-
+                            <strong>SQUAD</strong>
+                            <small>04</small>
                         </span>
 
                     </label>
@@ -739,7 +551,7 @@
 
             </div>
 
-
+            <!-- BOTÃO -->
             <button
                 type="submit"
                 class="submit-button"
@@ -749,12 +561,9 @@
                     CONFIRMAR INSCRIÇÃO
                 </span>
 
-                <strong>
-                    ↗
-                </strong>
+                <strong>↗</strong>
 
             </button>
-
 
             <p class="security-note">
                 Projeto acadêmico demonstrativo.
@@ -767,6 +576,5 @@
     </div>
 
 </section>
-
 
 {% endblock %}

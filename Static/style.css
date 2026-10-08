@@ -1971,4 +1971,1411 @@ a {
         gap: 15px;
     }
 
+}/* =====================================================
+   PÁGINA DE REVELAÇÃO
+===================================================== */
+
+.reveal-page {
+    min-height: 100vh;
+    padding: 90px 7%;
+    background:
+        radial-gradient(circle at 20% 10%, rgba(0, 255, 136, 0.08), transparent 30%),
+        #02070d;
+    color: #ffffff;
+}
+
+.reveal-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.reveal-code,
+.reveal-page .section-code {
+    display: inline-block;
+    color: #00e87b;
+    font-family: "Orbitron", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.reveal-page h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(48px, 7vw, 92px);
+    line-height: 0.95;
+    margin: 10px 0 25px;
+    letter-spacing: -3px;
+}
+
+.reveal-page h1 strong {
+    color: #00e87b;
+}
+
+.reveal-intro {
+    max-width: 750px;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #b7c0c9;
+    margin-bottom: 55px;
+}
+
+/* ALERTA */
+
+.alert-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+
+    padding: 32px;
+    margin-bottom: 80px;
+
+    border: 1px solid rgba(0, 232, 123, 0.45);
+    border-left: 5px solid #00e87b;
+
+    background: rgba(0, 232, 123, 0.06);
+}
+
+.alert-box > span {
+    font-size: 40px;
+    color: #00e87b;
+}
+
+.alert-box h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 25px;
+    margin: 0 0 12px;
+}
+
+.alert-box p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #c5ccd3;
+    max-width: 850px;
+}
+
+/* VÍDEO + EXPLICAÇÃO */
+
+.reveal-content {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 65px;
+    align-items: start;
+    margin-bottom: 90px;
+}
+
+.video-area h2,
+.explanation h2,
+.protection-box h2 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 30px;
+    margin: 5px 0 25px;
+}
+
+.video-area video {
+    display: block;
+    width: 100%;
+    min-height: 340px;
+    max-height: 520px;
+
+    background: #000;
+    border: 1px solid #1d3030;
+    box-shadow: 0 0 40px rgba(0, 232, 123, 0.08);
+}
+
+/* EXPLICAÇÃO */
+
+.explanation > p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #b7c0c9;
+    margin-bottom: 30px;
+}
+
+.warning-list {
+    display: grid;
+    gap: 12px;
+}
+
+.warning-list > div {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap: 18px;
+    align-items: center;
+
+    padding: 20px;
+
+    border: 1px solid #16242b;
+    background: #060d14;
+}
+
+.warning-list > div:hover {
+    border-color: #00e87b;
+}
+
+.warning-list > div > strong {
+    font-family: "Orbitron", sans-serif;
+    color: #00e87b;
+    font-size: 18px;
+}
+
+.warning-list p {
+    margin: 0;
+    color: #aeb8c1;
+    line-height: 1.5;
+}
+
+.warning-list b {
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* COMO SE PROTEGER */
+
+.protection-box {
+    padding: 45px;
+    margin-bottom: 55px;
+
+    border: 1px solid #17352b;
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(0, 232, 123, 0.10),
+            rgba(0, 232, 123, 0.02)
+        );
+}
+
+.protection-box p {
+    max-width: 900px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #c1c9cf;
+}
+
+/* CONTADORES */
+
+.reveal-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.reveal-stats > div {
+    padding: 35px;
+    background: #060d14;
+    border: 1px solid #17242c;
+}
+
+.reveal-stats span {
+    display: block;
+    color: #7c8993;
+    font-family: "Orbitron", sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.reveal-stats strong {
+    font-family: "Orbitron", sans-serif;
+    font-size: 45px;
+    color: #00e87b;
+}
+
+/* CRÉDITOS */
+
+.project-credit {
+    padding: 35px 0;
+    border-top: 1px solid #17242c;
+    border-bottom: 1px solid #17242c;
+    margin-bottom: 35px;
+}
+
+.project-credit p {
+    color: #84909a;
+    margin: 7px 0;
+}
+
+.project-credit strong {
+    display: block;
+    font-family: "Orbitron", sans-serif;
+    font-size: 17px;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+/* VOLTAR */
+
+.back-button {
+    display: inline-block;
+
+    padding: 16px 25px;
+
+    background: #00e87b;
+    color: #001008;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition: 0.25s;
+}
+
+.back-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 232, 123, 0.25);
+}
+
+/* CELULAR */
+
+@media (max-width: 900px) {
+
+    .reveal-page {
+        padding: 60px 5%;
+    }
+
+    .reveal-content {
+        grid-template-columns: 1fr;
+    }
+
+    .reveal-page h1 {
+        font-size: 50px;
+    }
+
+    .reveal-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .video-area video {
+        min-height: 230px;
+    }
+
+    .alert-box {
+        padding: 25px;
+    }
+}/* ==================================================
+   PÁGINA DE REVELAÇÃO
+================================================== */
+
+.reveal-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 5% 120px;
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(0, 237, 122, 0.09),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 55%,
+            rgba(0, 237, 122, 0.04),
+            transparent 25%
+        ),
+        var(--bg);
+
+    color: var(--white);
+}
+
+.reveal-container {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+}
+
+
+/* ==================================================
+   CABEÇALHO DA REVELAÇÃO
+================================================== */
+
+.reveal-code {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    color: var(--green);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.reveal-code::before {
+    content: "";
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    box-shadow:
+        0 0 12px var(--green),
+        0 0 25px rgba(0, 237, 122, .35);
+}
+
+.reveal-page h1 {
+    max-width: 1000px;
+
+    margin: 0;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(55px, 7vw, 100px);
+    font-weight: 900;
+
+    line-height: .95;
+    letter-spacing: -5px;
+}
+
+.reveal-page h1 strong {
+    color: var(--green);
+
+    text-shadow:
+        0 0 15px rgba(0, 237, 122, .35),
+        0 0 45px rgba(0, 237, 122, .10);
+}
+
+.reveal-intro {
+    max-width: 760px;
+
+    margin-top: 28px;
+    margin-bottom: 55px;
+
+    color: #9aa9b7;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.reveal-intro strong {
+    color: var(--green);
+}
+
+
+/* ==================================================
+   ALERTA DA SIMULAÇÃO
+================================================== */
+
+.alert-box {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 25px;
+
+    margin-bottom: 100px;
+    padding: 35px 40px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(0, 237, 122, .10),
+            rgba(0, 237, 122, .025)
+        );
+
+    border: 1px solid var(--green-border);
+    border-left: 4px solid var(--green);
+}
+
+.alert-box::after {
+    content: "WARNING";
+
+    position: absolute;
+    right: -10px;
+    bottom: -23px;
+
+    color: rgba(0, 237, 122, .035);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 85px;
+    font-weight: 900;
+
+    pointer-events: none;
+}
+
+.alert-box > span {
+    position: relative;
+    z-index: 2;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #02060f;
+    background: var(--green);
+
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.alert-box > div {
+    position: relative;
+    z-index: 2;
+}
+
+.alert-box h2 {
+    margin-bottom: 10px;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.alert-box p {
+    max-width: 850px;
+
+    color: #a8b5c1;
+
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+/* ==================================================
+   VÍDEO + EXPLICAÇÃO
+================================================== */
+
+.reveal-content {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 60px;
+
+    align-items: start;
+
+    margin-bottom: 100px;
+}
+
+.video-area,
+.explanation {
+    min-width: 0;
+}
+
+.reveal-page .section-code {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--green);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.video-area h2,
+.explanation h2,
+.protection-box h2 {
+    margin-bottom: 25px;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(26px, 3vw, 38px);
+    font-weight: 800;
+
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+
+/* ==================================================
+   PLAYER DE VÍDEO
+================================================== */
+
+.video-area video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    display: block;
+
+    background: #000;
+
+    border: 1px solid #203043;
+    border-bottom: 3px solid var(--green);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, .40),
+        0 0 35px rgba(0, 237, 122, .05);
+
+    object-fit: contain;
+}
+
+
+/* ==================================================
+   TEXTO EXPLICATIVO
+================================================== */
+
+.explanation > p {
+    margin-bottom: 28px;
+
+    color: #9aa9b7;
+
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+/* ==================================================
+   SINAIS DE PHISHING
+================================================== */
+
+.warning-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.warning-list > div {
+    min-height: 100px;
+
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap: 18px;
+
+    align-items: center;
+
+    padding: 20px 22px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #07101d,
+            #050b14
+        );
+
+    border: 1px solid var(--border);
+
+    transition: .25s;
+}
+
+.warning-list > div:hover {
+    transform: translateX(5px);
+
+    border-color: rgba(0, 237, 122, .45);
+
+    background:
+        linear-gradient(
+            120deg,
+            rgba(0, 237, 122, .08),
+            #050b14
+        );
+}
+
+.warning-list > div > strong {
+    color: var(--green);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 18px;
+}
+
+.warning-list p {
+    margin: 0;
+
+    color: #8493a2;
+
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.warning-list b {
+    display: inline-block;
+
+    margin-bottom: 4px;
+
+    color: var(--white);
+
+    font-size: 16px;
+}
+
+
+/* ==================================================
+   COMO SE PROTEGER
+================================================== */
+
+.protection-box {
+    position: relative;
+
+    margin-bottom: 70px;
+    padding: 55px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(0, 237, 122, .13),
+            transparent 30%
+        ),
+        #07101d;
+
+    border: 1px solid var(--green-border);
+}
+
+.protection-box::after {
+    content: "SECURITY";
+
+    position: absolute;
+    right: -10px;
+    bottom: -25px;
+
+    color: rgba(255, 255, 255, .025);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 90px;
+    font-weight: 900;
+
+    pointer-events: none;
+}
+
+.protection-box .section-code,
+.protection-box h2,
+.protection-box p {
+    position: relative;
+    z-index: 2;
+}
+
+.protection-box h2 {
+    max-width: 800px;
+}
+
+.protection-box p {
+    max-width: 900px;
+
+    color: #a1afbb;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   CONTADORES
+================================================== */
+
+.reveal-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+
+    margin-bottom: 75px;
+}
+
+.reveal-stats > div {
+    position: relative;
+
+    min-height: 160px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 30px 35px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #08111e,
+            #050b14
+        );
+
+    border: 1px solid var(--border);
+}
+
+.reveal-stats > div::after {
+    content: "";
+
+    position: absolute;
+    right: -40px;
+    top: -40px;
+
+    width: 100px;
+    height: 100px;
+
+    transform: rotate(45deg);
+
+    border: 1px solid rgba(0, 237, 122, .12);
+}
+
+.reveal-stats span {
+    margin-bottom: 10px;
+
+    color: #66778a;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.reveal-stats strong {
+    color: var(--green);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+
+/* ==================================================
+   CRÉDITOS
+================================================== */
+
+.project-credit {
+    margin-bottom: 40px;
+    padding: 40px;
+
+    text-align: center;
+
+    background: #050b14;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.project-credit p {
+    margin: 8px 0;
+
+    color: #718194;
+
+    font-size: 13px;
+}
+
+.project-credit strong {
+    display: block;
+
+    margin: 12px 0;
+
+    color: var(--white);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 16px;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==================================================
+   BOTÃO VOLTAR
+================================================== */
+
+.back-button {
+    min-width: 240px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px 25px;
+
+    color: #02060f;
+    background: var(--green);
+
+    border: 1px solid var(--green);
+    border-radius: 2px;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    transition: .25s;
+}
+
+.back-button:hover {
+    transform: translateY(-3px);
+
+    color: #02060f;
+    background: var(--white);
+
+    border-color: var(--white);
+
+    box-shadow:
+        0 10px 35px rgba(0, 237, 122, .20);
+}
+/* ==================================================
+   REVELAÇÃO - GAME ARENA
+================================================== */
+
+.reveal-page {
+    min-height: calc(100vh - 80px);
+    padding: 32px 20px 45px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(0, 237, 122, .10), transparent 32%),
+        linear-gradient(rgba(2, 6, 15, .78), rgba(2, 6, 15, .92)),
+        var(--bg);
+}
+
+.reveal-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(120deg, transparent 0 12%, rgba(0,237,122,.04) 12.2%, transparent 12.5%),
+        linear-gradient(240deg, transparent 0 12%, rgba(0,237,122,.04) 12.2%, transparent 12.5%);
+    pointer-events: none;
+}
+
+.reveal-container {
+    width: min(920px, 94%);
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* TOPO */
+
+.reveal-code {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+
+    color: var(--green);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 6px;
+}
+
+.reveal-page h1 {
+    margin: 0;
+    text-align: center;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(42px, 5vw, 65px);
+    font-weight: 900;
+
+    line-height: 1;
+    letter-spacing: -3px;
+}
+
+.reveal-page h1 strong {
+    color: var(--green);
+}
+
+.reveal-intro {
+    max-width: 700px;
+
+    margin: 10px auto 22px;
+
+    text-align: center;
+
+    color: #aeb8c4;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.reveal-intro strong {
+    color: white;
+}
+
+
+/* LINHA VERDE ABAIXO DO TÍTULO */
+
+.reveal-intro::after {
+    content: "";
+
+    display: block;
+
+    width: 35px;
+    height: 2px;
+
+    margin: 12px auto 0;
+
+    background: var(--green);
+
+    box-shadow: 0 0 10px rgba(0,237,122,.4);
+}
+
+
+/* ALERTA */
+
+.alert-box {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 14px;
+    padding: 18px 22px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,237,122,.09),
+            rgba(0,237,122,.025)
+        );
+
+    border: 1px solid rgba(0,237,122,.45);
+    border-radius: 9px;
+}
+
+.alert-box > span {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(0,237,122,.12);
+
+    color: var(--green);
+
+    font-size: 27px;
+
+    box-shadow:
+        inset 0 0 20px rgba(0,237,122,.08);
+}
+
+.alert-box h2 {
+    margin-bottom: 5px;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.alert-box h2::after {
+    content: "";
+}
+
+.alert-box p {
+    max-width: 720px;
+
+    color: #a4b0bd;
+
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+
+/* ==================================================
+   VÍDEO
+================================================== */
+
+.reveal-content {
+    display: block;
+    margin: 0;
+}
+
+.video-area {
+    margin-bottom: 16px;
+    padding: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(0,237,122,.055),
+            rgba(5,11,23,.94)
+        );
+
+    border: 1px solid rgba(0,237,122,.48);
+    border-radius: 9px;
+}
+
+.video-area .section-code {
+    display: none;
+}
+
+.video-area h2 {
+    margin: 0 0 12px 3px;
+
+    color: white;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.video-area h2::before {
+    content: "▣";
+    margin-right: 10px;
+    color: var(--green);
+}
+
+.video-area video {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 16 / 7.5;
+
+    background: #000;
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 6px;
+
+    object-fit: contain;
+}
+
+
+/* ==================================================
+   VOCÊ PERCEBEU OS SINAIS?
+================================================== */
+
+.explanation {
+    margin-top: 12px;
+}
+
+.explanation .section-code {
+    display: none;
+}
+
+.explanation h2 {
+    margin-bottom: 7px;
+
+    text-align: center;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.explanation h2::first-line {
+    color: white;
+}
+
+.explanation > p {
+    max-width: 670px;
+
+    margin: 0 auto 13px;
+
+    text-align: center;
+
+    color: #a7b2be;
+
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+
+/* CARDS DOS SINAIS */
+
+.warning-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 9px;
+}
+
+.warning-list > div {
+    min-height: 92px;
+
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,237,122,.055),
+            rgba(5,11,23,.95)
+        );
+
+    border: 1px solid rgba(0,237,122,.32);
+    border-radius: 7px;
+
+    transition: .2s;
+}
+
+/* 3 EM CIMA */
+
+.warning-list > div:nth-child(1),
+.warning-list > div:nth-child(2),
+.warning-list > div:nth-child(3) {
+    grid-column: span 2;
+}
+
+/* 2 MAIORES EMBAIXO */
+
+.warning-list > div:nth-child(4),
+.warning-list > div:nth-child(5) {
+    grid-column: span 3;
+}
+
+.warning-list > div:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--green);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.25);
+}
+
+.warning-list > div > strong {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(0,237,122,.10);
+
+    color: var(--green);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 12px;
+
+    box-shadow:
+        inset 0 0 15px rgba(0,237,122,.08);
+}
+
+.warning-list p {
+    margin: 0;
+
+    color: #9ba8b5;
+
+    font-size: 11px;
+    line-height: 1.35;
+}
+
+.warning-list b {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: white;
+
+    font-size: 12px;
+}
+
+
+/* ==================================================
+   COMO SE PROTEGER
+================================================== */
+
+.protection-box {
+    width: min(380px, 100%);
+
+    margin: 10px auto 20px;
+    padding: 10px 15px;
+
+    text-align: center;
+
+    background:
+        rgba(0,237,122,.045);
+
+    border: 2px solid var(--green);
+    border-radius: 7px;
+
+    box-shadow:
+        0 0 18px rgba(0,237,122,.07);
+}
+
+.protection-box .section-code {
+    display: none;
+}
+
+.protection-box h2 {
+    margin: 0;
+
+    color: white;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: .5px;
+}
+
+.protection-box h2::before {
+    content: "⬟";
+    margin-right: 8px;
+    color: var(--green);
+}
+
+.protection-box p {
+    display: none;
+}
+
+
+/* ==================================================
+   CONTADORES
+================================================== */
+
+.reveal-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+    margin: 18px 0;
+}
+
+.reveal-stats > div {
+    text-align: center;
+}
+
+.reveal-stats span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #617184;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 7px;
+
+    letter-spacing: 1px;
+}
+
+.reveal-stats strong {
+    color: var(--green);
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 22px;
+}
+
+
+/* ==================================================
+   CRÉDITOS
+================================================== */
+
+.project-credit {
+    margin-top: 15px;
+
+    text-align: center;
+}
+
+.project-credit p {
+    margin: 3px 0;
+
+    color: #8c99a7;
+
+    font-size: 10px;
+}
+
+.project-credit strong {
+    color: white;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 10px;
+
+    letter-spacing: .5px;
+}
+
+
+/* BOTÃO VOLTAR */
+
+.back-button {
+    width: fit-content;
+
+    display: block;
+
+    margin: 16px auto 0;
+
+    color: #b8c1ca;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition: .2s;
+}
+
+.back-button:hover {
+    color: var(--green);
+}
+
+
+/* ==================================================
+   RESPONSIVO
+================================================== */
+
+@media (max-width: 800px) {
+
+    .reveal-page {
+        padding-top: 45px;
+    }
+
+    .reveal-page h1 {
+        font-size: 43px;
+    }
+
+    .warning-list {
+        grid-template-columns: 1fr;
+    }
+
+    .warning-list > div:nth-child(n) {
+        grid-column: auto;
+    }
+
+    .video-area video {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .reveal-container {
+        width: 96%;
+    }
+
+    .reveal-page h1 {
+        font-size: 36px;
+        letter-spacing: -2px;
+    }
+
+    .reveal-code {
+        font-size: 7px;
+        letter-spacing: 4px;
+    }
+
+    .reveal-intro {
+        font-size: 14px;
+    }
+
+    .alert-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .alert-box > span {
+        margin: auto;
+    }
+
+    .video-area {
+        padding: 10px;
+    }
+
+    .video-area h2 {
+        font-size: 16px;
+    }
+
+    .explanation h2 {
+        font-size: 18px;
+    }
+
+    .reveal-stats {
+        gap: 25px;
+    }
 }

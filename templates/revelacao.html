@@ -1,0 +1,390 @@
+{% extends "base.html" %}
+
+{% block title %}Você Cairia? | Game Arena 2026{% endblock %}
+
+{% block content %}
+
+<style>
+.reveal-page {
+    background: #02060f;
+    color: #f5f7f7;
+    padding: 85px 20px 100px;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.reveal-container {
+    max-width: 1050px;
+    margin: auto;
+    text-align: center;
+}
+
+.reveal-code {
+    display: inline-block;
+    color: #00ed7a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.reveal-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(38px, 7vw, 76px);
+    font-weight: 900;
+    line-height: 1.15;
+    margin: 0 0 25px;
+    color: #fff;
+}
+
+.reveal-title span {
+    color: #00ed7a;
+}
+
+.reveal-intro {
+    color: #a4b1bd;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 720px;
+    margin: 0 auto 45px;
+}
+
+.reveal-alert {
+    border: 1px solid rgba(0, 237, 122, .45);
+    background: linear-gradient(135deg, #071a17, #06101a);
+    border-radius: 15px;
+    padding: 35px;
+    text-align: left;
+    margin-bottom: 60px;
+    box-shadow: 0 0 35px rgba(0, 237, 122, .05);
+}
+
+.reveal-alert h2 {
+    color: #00ed7a;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 21px;
+    margin: 0 0 15px;
+}
+
+.reveal-alert p {
+    color: #bdc8d2;
+    line-height: 1.9;
+    margin: 0;
+}
+
+.reveal-section-code {
+    display: block;
+    color: #00ed7a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.reveal-video-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(22px, 4vw, 35px);
+    margin: 0 0 25px;
+}
+
+.reveal-video-box {
+    border: 1px solid rgba(0, 237, 122, .35);
+    border-radius: 15px;
+    overflow: hidden;
+    background: #050b17;
+    margin-bottom: 90px;
+    padding: 10px;
+}
+
+.reveal-video-box video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 8px;
+}
+
+.reveal-explanation {
+    margin-bottom: 40px;
+}
+
+.reveal-explanation h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(25px, 4vw, 38px);
+    margin: 0 0 20px;
+}
+
+.reveal-explanation p {
+    color: #a4b1bd;
+    line-height: 1.9;
+    max-width: 780px;
+    margin: auto;
+}
+
+.reveal-warning-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 45px 0 65px;
+    text-align: left;
+}
+
+.reveal-warning-card {
+    border: 1px solid rgba(0, 237, 122, .25);
+    border-radius: 13px;
+    padding: 27px;
+    background: #07101d;
+    transition: .3s;
+}
+
+.reveal-warning-card:hover {
+    border-color: #00ed7a;
+    transform: translateY(-5px);
+}
+
+.reveal-warning-card .number {
+    color: #00ed7a;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.reveal-warning-card h3 {
+    color: #fff;
+    font-size: 17px;
+    margin: 18px 0 12px;
+}
+
+.reveal-warning-card p {
+    color: #a4b1bd;
+    line-height: 1.8;
+    font-size: 14px;
+    margin: 0;
+}
+
+.reveal-protection {
+    max-width: 750px;
+    margin: 0 auto 70px;
+    padding: 40px 25px;
+    border: 1px solid rgba(0, 237, 122, .4);
+    background: linear-gradient(135deg, #071a17, #050b17);
+    border-radius: 15px;
+}
+
+.reveal-protection h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(20px, 3.5vw, 30px);
+    color: #00ed7a;
+    margin: 0 0 15px;
+}
+
+.reveal-protection p {
+    color: #bdc8d2;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.reveal-credits {
+    color: #9aa9b8;
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 35px;
+}
+
+.reveal-back {
+    display: inline-block;
+    padding: 15px 28px;
+    border-radius: 8px;
+    background: #00ed7a;
+    color: #02060f;
+    font-weight: 800;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.reveal-back:hover {
+    background: #64ffae;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 850px) {
+    .reveal-warning-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .reveal-page {
+        padding: 55px 16px 75px;
+    }
+
+    .reveal-warning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reveal-alert {
+        padding: 25px;
+    }
+}
+</style>
+
+<section class="reveal-page">
+
+    <div class="reveal-container">
+
+        <span class="reveal-code">
+            SIMULAÇÃO FINALIZADA // 2026
+        </span>
+
+        <h1 class="reveal-title">
+            VOCÊ <span>CAIRIA?</span>
+        </h1>
+
+        <p class="reveal-intro">
+            Calma! Este site faz parte de uma simulação educativa
+            sobre phishing, desenvolvida por estudantes do
+            3º ano do curso Técnico em Informática do IFRO.
+        </p>
+
+        <div class="reveal-alert">
+
+            <h2>⚠ ISSO FOI UMA SIMULAÇÃO</h2>
+
+            <p>
+                A inscrição que você acabou de preencher foi criada
+                para demonstrar como páginas aparentemente confiáveis
+                podem ser utilizadas para solicitar informações pessoais.
+                O evento Game Arena foi utilizado como exemplo
+                para mostrar como golpes podem chamar a atenção
+                das pessoas na internet.
+            </p>
+
+        </div>
+
+        <span class="reveal-section-code">
+            01 // ENTENDA O QUE ACONTECEU
+        </span>
+
+        <h2 class="reveal-video-title">
+            ASSISTA AO VÍDEO
+        </h2>
+
+        <div class="reveal-video-box">
+
+            <video controls playsinline preload="metadata">
+                <source
+                    src="{{ url_for('static', filename='video/phishing.mp4') }}"
+                    type="video/mp4"
+                >
+
+                Seu navegador não suporta reprodução de vídeo.
+            </video>
+
+        </div>
+
+        <div class="reveal-explanation">
+
+            <span class="reveal-section-code">
+                02 // IDENTIFIQUE OS SINAIS
+            </span>
+
+            <h2>VOCÊ PERCEBEU OS SINAIS?</h2>
+
+            <p>
+                Phishing é um tipo de golpe em que criminosos
+                tentam enganar pessoas utilizando mensagens,
+                e-mails e páginas falsas que parecem confiáveis.
+                O objetivo pode ser conseguir informações pessoais,
+                senhas ou outros dados importantes.
+            </p>
+
+        </div>
+
+        <div class="reveal-warning-grid">
+
+            <div class="reveal-warning-card">
+                <span class="number">01 /</span>
+                <h3>Ofertas atraentes</h3>
+                <p>
+                    Promoções, eventos e prêmios podem ser usados
+                    para chamar sua atenção e despertar curiosidade.
+                </p>
+            </div>
+
+            <div class="reveal-warning-card">
+                <span class="number">02 /</span>
+                <h3>Links suspeitos</h3>
+                <p>
+                    Confira sempre o endereço do site antes de clicar
+                    ou fornecer qualquer informação.
+                </p>
+            </div>
+
+            <div class="reveal-warning-card">
+                <span class="number">03 /</span>
+                <h3>Pedido de informações</h3>
+                <p>
+                    Questione por que um site precisa dos dados
+                    que está solicitando.
+                </p>
+            </div>
+
+            <div class="reveal-warning-card">
+                <span class="number">04 /</span>
+                <h3>Urgência</h3>
+                <p>
+                    Expressões como "última chance" e "agora"
+                    podem fazer você agir sem pensar.
+                </p>
+            </div>
+
+            <div class="reveal-warning-card">
+                <span class="number">05 /</span>
+                <h3>Dados pessoais</h3>
+                <p>
+                    Nunca compartilhe senhas, códigos de autenticação
+                    ou informações bancárias em links desconhecidos.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="reveal-protection">
+
+            <span class="reveal-section-code">
+                03 // PROTEJA-SE
+            </span>
+
+            <h2>PARE. CONFIRA. DEPOIS CLIQUE.</h2>
+
+            <p>
+                Antes de confiar em uma página, verifique
+                o endereço, desconfie de mensagens inesperadas
+                e procure os canais oficiais.
+            </p>
+
+        </div>
+
+        <div class="reveal-credits">
+
+            <strong>PROJETO ACADÊMICO — SEGURANÇA DA INFORMAÇÃO</strong>
+
+            <p>
+                3º A Informática • IFRO Campus Ariquemes
+            </p>
+
+            <p>
+                Professor Felipe Balém
+            </p>
+
+        </div>
+
+        <a href="{{ url_for('inicio') }}" class="reveal-back">
+            ← VOLTAR PARA O INÍCIO
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

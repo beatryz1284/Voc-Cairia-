@@ -1,0 +1,357 @@
+{% extends "base.html" %}
+
+{% block title %}Sobre o Projeto | Game Arena 2026{% endblock %}
+
+{% block content %}
+
+<style>
+.sobre-page {
+    background: #02060f;
+    color: #f5f7f7;
+    padding: 85px 20px 100px;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.sobre-container {
+    max-width: 1050px;
+    margin: auto;
+}
+
+.sobre-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.sobre-code {
+    display: inline-block;
+    color: #00ed7a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.sobre-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(36px, 6vw, 65px);
+    font-weight: 900;
+    margin: 0 0 25px;
+    line-height: 1.2;
+}
+
+.sobre-title span {
+    color: #00ed7a;
+}
+
+.sobre-intro {
+    color: #a4b1bd;
+    font-size: 17px;
+    line-height: 1.9;
+    max-width: 740px;
+    margin: auto;
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-bottom: 65px;
+}
+
+.sobre-card {
+    background: linear-gradient(145deg, #07101d, #06101a);
+    border: 1px solid rgba(0, 237, 122, .23);
+    border-radius: 15px;
+    padding: 35px;
+    transition: .3s;
+}
+
+.sobre-card:hover {
+    border-color: #00ed7a;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 237, 122, .07);
+}
+
+.sobre-card-code {
+    display: block;
+    color: #00ed7a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.sobre-card h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 21px;
+    line-height: 1.5;
+    color: #fff;
+    margin: 0 0 20px;
+}
+
+.sobre-card p {
+    color: #a4b1bd;
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0 0 14px;
+}
+
+.sobre-card p:last-child {
+    margin-bottom: 0;
+}
+
+.sobre-team {
+    border: 1px solid rgba(0, 237, 122, .4);
+    background: linear-gradient(135deg, #071a17, #050b17);
+    border-radius: 16px;
+    padding: 45px 35px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.sobre-team h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 29px;
+    margin: 0 0 30px;
+}
+
+.sobre-members {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.sobre-member {
+    border: 1px solid rgba(0, 237, 122, .2);
+    background: rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    padding: 17px;
+    font-weight: 700;
+}
+
+.sobre-member span {
+    color: #00ed7a;
+    margin-right: 8px;
+}
+
+.sobre-team-info {
+    color: #a4b1bd;
+    line-height: 2;
+    font-size: 14px;
+}
+
+.sobre-back-container {
+    text-align: center;
+}
+
+.sobre-back {
+    display: inline-block;
+    padding: 16px 30px;
+    border-radius: 8px;
+    background: #00ed7a;
+    color: #02060f;
+    text-decoration: none;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.sobre-back:hover {
+    background: #64ffae;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 750px) {
+    .sobre-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-members {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-page {
+        padding: 55px 16px 75px;
+    }
+
+    .sobre-card {
+        padding: 27px;
+    }
+
+    .sobre-team {
+        padding: 35px 20px;
+    }
+}
+</style>
+
+<section class="sobre-page">
+
+    <div class="sobre-container">
+
+        <div class="sobre-heading">
+
+            <span class="sobre-code">
+                SOBRE // GAME ARENA 2026
+            </span>
+
+            <h1 class="sobre-title">
+                SOBRE O <span>PROJETO.</span>
+            </h1>
+
+            <p class="sobre-intro">
+                Muito mais do que uma experiência gamer.
+                O Game Arena 2026 é um projeto educativo
+                desenvolvido por estudantes do curso Técnico
+                em Informática do IFRO Campus Ariquemes,
+                na disciplina de Segurança da Informação.
+            </p>
+
+        </div>
+
+        <div class="sobre-grid">
+
+            <div class="sobre-card">
+
+                <span class="sobre-card-code">
+                    01 // OBJETIVO
+                </span>
+
+                <h2>VOCÊ SABERIA IDENTIFICAR UM GOLPE?</h2>
+
+                <p>
+                    Nosso objetivo é conscientizar as pessoas
+                    sobre os riscos presentes na internet,
+                    especialmente os golpes de phishing.
+                </p>
+
+                <p>
+                    Queremos mostrar como páginas aparentemente
+                    confiáveis podem despertar curiosidade
+                    e incentivar o fornecimento de dados pessoais.
+                </p>
+
+            </div>
+
+            <div class="sobre-card">
+
+                <span class="sobre-card-code">
+                    02 // A EXPERIÊNCIA
+                </span>
+
+                <h2>COMO FUNCIONA O GAME ARENA?</h2>
+
+                <p>
+                    Criamos uma página fictícia de torneios
+                    de jogos eletrônicos, com diferentes
+                    modalidades e um formulário de inscrição.
+                </p>
+
+                <p>
+                    Depois da inscrição, o participante
+                    descobre que estava em uma simulação
+                    e recebe orientações sobre segurança digital.
+                </p>
+
+            </div>
+
+            <div class="sobre-card">
+
+                <span class="sobre-card-code">
+                    03 // PHISHING
+                </span>
+
+                <h2>O QUE É PHISHING?</h2>
+
+                <p>
+                    Phishing é um golpe que utiliza mensagens,
+                    e-mails ou sites falsos para enganar
+                    usuários e obter informações.
+                </p>
+
+                <p>
+                    Os criminosos podem se passar por empresas,
+                    instituições ou serviços conhecidos
+                    para conquistar a confiança das vítimas.
+                </p>
+
+            </div>
+
+            <div class="sobre-card">
+
+                <span class="sobre-card-code">
+                    04 // PREVENÇÃO
+                </span>
+
+                <h2>COMO SE PROTEGER?</h2>
+
+                <p>
+                    Confira o endereço dos sites, desconfie
+                    de mensagens inesperadas e nunca
+                    compartilhe senhas ou códigos de segurança.
+                </p>
+
+                <p>
+                    Antes de fornecer informações pessoais,
+                    verifique se a página realmente pertence
+                    à instituição que afirma representar.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="sobre-team">
+
+            <span class="sobre-code">
+                05 // CRÉDITOS
+            </span>
+
+            <h2>NOSSA EQUIPE</h2>
+
+            <div class="sobre-members">
+
+                <div class="sobre-member">
+                    <span>01.</span>
+                    Beatryz C. dos Santos
+                </div>
+
+                <div class="sobre-member">
+                    <span>02.</span>
+                    Nicoly A. Lopes
+                </div>
+
+                <div class="sobre-member">
+                    <span>03.</span>
+                    Maria E. Afonso
+                </div>
+
+                <div class="sobre-member">
+                    <span>04.</span>
+                    Wérica P. de Souza
+                </div>
+
+            </div>
+
+            <div class="sobre-team-info">
+                <strong>3º A — Técnico em Informática</strong>
+                <p>Disciplina: Segurança da Informação</p>
+                <p>Professor: Felipe Balém</p>
+                <p>Instituto Federal de Rondônia — Campus Ariquemes</p>
+            </div>
+
+        </div>
+
+        <div class="sobre-back-container">
+
+            <a href="{{ url_for('inicio') }}" class="sobre-back">
+                ← VOLTAR PARA O INÍCIO
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
